@@ -3,13 +3,13 @@ let ws;
 function connectWebSocket(){
   
     //1. Create an instance of a WebSocket pointing to a specific server and port
-    ws= new WebSocket('ws://localhost:3006')
+    ws= new WebSocket('wss://node-js-course-prod.onrender.com')
 
 
     //2. Event handling - onopen, onmessage, onclose
    // - Connection as made at server
     ws.onopen = () => {
-        console.log('Connected to server ws port 3006');
+        console.log('Connected to server ws port');
     };
     // - Server sends a message to me
     ws.onmessage = (event) =>{
@@ -31,14 +31,6 @@ function connectWebSocket(){
 
 
         chat.appendChild(message);
-        
-        
-        
-        /*const node = document.getElementById("chat");
-        const textnode = document.createTextNode(reader.result);
-        node.appendChild(textnode);
-        
-        console.log(reader.result);*/
     };
 
     if(event.data instanceof Blob){
@@ -49,9 +41,7 @@ function connectWebSocket(){
     // - Connecton to server closed
     ws.onclose = () =>{
 
-    };
-
-    
+    };    
 }
 
 function sendMessage(){
