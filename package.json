@@ -1,0 +1,18 @@
+{
+  "name": "lz-super-server",
+  "version": "1.0.0",
+  "main": "lib/appServer.js",
+  "description": "This is my first project in node.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",  
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
